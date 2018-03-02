@@ -4,7 +4,7 @@
 }
 </style>
 <?php
-$run = false;
+$run = true;
 if($run){
     #!/usr/local/bin/php -q
     include '../config/config_main.php';
