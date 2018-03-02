@@ -4,9 +4,9 @@
 	$mysqli = new mysqli("mysql.hostinger.co.id","u823173079_fb","mQ0wZfXEuKSacOK2C2","u823173079_fb");
 		
 	const FACEBOOK_ID = "1778087199163923";
-	const FACEBOOK_SECRET = "ed3c54cb93d82178f00d72f917311fe7";
-	const TWITTER_KEY = "5c0xQZe7xgHDG4hgDwDJY1DVn";
-	const TWITTER_SECRET = "5qp1VTQCALZaD6MpHMiH4QRnmd1D2WZasu6fMsUC1AtIRTsOyp";
+	const FACEBOOK_SECRET = "f43a73e0294e28f686995c1551c0918d";
+	const TWITTER_KEY = "3O4477SeIfB2NgaTcCaRlZLYH";
+	const TWITTER_SECRET = "fa9ANhcOi4o4RlhOlRHxjlzfF5kHnXUjkv4FCwFzeFhx4Jxj9e";
 
 	if (mysqli_connect_errno()){
 	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
