@@ -11,13 +11,13 @@
                 $send = false;
                 if(userTrial($user->created) == 2){
                     $subject = "Reminder Expired Account Day 1";
-                    $message = "This email sending by system to reminder expired account Day 1";
+                    $message = getPengaturan("email_reminder1")->value_pengaturan;
                     $send = true;
                     echo "Day 1 reminder<br>";
                 }
                 if(userTrial($user->created) == 3){
                     $subject = "Reminder Expired Account Day 2";
-                    $message = "This email sending by system to reminder expired account Day 2";
+                    $message = getPengaturan("email_reminder2")->value_pengaturan;
                     $send = true;
                     echo "Day 2 reminder<br>";
                 }
