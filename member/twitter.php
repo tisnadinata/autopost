@@ -105,7 +105,7 @@
                     <strong>TWITTER SETTINGS DOCUMENTATION</strong>
                 </div>
                 <div class="card-content">
-                    <!-- <h4 class="title"><strong>HOW TO CHANGE MY TWITTER ACCOUNT ?</strong></h4>
+                    <h4 class="title"><strong>HOW TO LINK TWITTER ACCOUNT ?</strong></h4>
                     <p class="category">
                         <ol>
                             <li>Make sure your twitter already in logout condition</li>
@@ -115,7 +115,7 @@
                             <li>If it's successfully the card beside will show your new twitter account name</li>
                         </ol>
                     </p>
-                    <hr> -->
+                    <hr>
                     <h4 class="title"><strong>WHAT SHOULD I DO IF MY TWITTER ACCOUNT EXPIRED ?</strong></h4>
                     <p class="category">
                         <ol>
