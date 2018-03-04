@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card card-stats">
+            <div class="card card-stats" style="visibility: hidden;">
                 <div class="card-header" data-background-color="blue">
                     <i class="fa fa-twitter-square"></i>
                 </div>
