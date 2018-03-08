@@ -5,9 +5,6 @@
 </style>
 <?php
 $run = true;
-if($_GET['phase'] != 1){
-    $run = false;
-}
 if($run){
     #!/usr/local/bin/php -q
     include '../config/config_main.php';
