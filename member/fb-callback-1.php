@@ -3,7 +3,6 @@
   
 	ini_set('display_errors',1);
   require_once '../library/facebook-sdk-v5/autoload.php';
-  define('FACEBOOK_SDK_V4_SRC_DIR', '../library/facebook-sdk-v5/');
 $fb = new Facebook\Facebook([
 		'app_id' => FACEBOOK_ID,
 		'app_secret' => FACEBOOK_SECRET,
