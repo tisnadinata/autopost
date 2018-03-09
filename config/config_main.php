@@ -247,5 +247,19 @@
 			return "Sory, we cannot post yet. Fail to upload media";
 		}
 	}
-	
+	function twDelete($token,$secret,$post_id){
+		try{
+			$connection = new TwitterOAuth(TWITTER_KEY, TWITTER_SECRET, $token, $secret);
+			$connection->setTimeouts(15, 300);
+			$content = $connection->get("account/verify_credentials");
+			$response = $connection->post('statuses/destroy/'.$post_id, array());
+			if ($connection->getLastHttpCode() == 200) {
+				return "Delete success<br>".var_dump($response);
+			} else {
+				return "Delete fail<br>".var_dump($response);
+			}			
+		}catch(Exception $e){
+			return "Sory, we cannot post yet. Fail to upload media";
+		}
+	}
 ?>
