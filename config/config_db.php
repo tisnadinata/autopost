@@ -1,7 +1,6 @@
 <?php
 	session_start();
-	// $mysqli = new mysqli("localhost","root","","db_getrich");
-	$mysqli = new mysqli("mysql.hostinger.co.id","u823173079_fb","mQ0wZfXEuKSacOK2C2","u823173079_fb");
+	$mysqli = new mysqli("localhost","root","","db_getrich");
 		
 	const FACEBOOK_ID = "1778087199163923";
 	const FACEBOOK_SECRET = "f43a73e0294e28f686995c1551c0918d";
