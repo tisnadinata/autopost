@@ -9,7 +9,7 @@
                     $sql = "delete from getrich_files where file_id=".$_GET['delete']." and file_user=".$_SESSION['user_data']->user_id;
                     $stmt = $mysqli->query($sql);                    
                     if($stmt){
-                        $mysqli->query("update getrich_contents set content_url='',content_type='text' where content_url='".$files_delete->file_url."'")
+                        $mysqli->query("update getrich_contents set content_url='',content_type='text' where content_url='".$files_delete->file_url."'");
                         unlink($files_delete->file_url);
                         echo '<div class="alert alert-success" role="alert">
                                     Success delete content.
