@@ -191,6 +191,35 @@
 		// echo 'Photo ID: ' . $graphNode['id'];
 		return "Your post success with id [".$graphNode['id']."] (facebook)";
 	}
+	function fbPostDelete($token,$post_id,$title,$message,$path){
+		require_once '../library/facebook-sdk-v5/autoload.php';
+		$fb = new Facebook\Facebook([
+		  'app_id' => FACEBOOK_ID,
+		  'app_secret' => FACEBOOK_SECRET,
+		  'default_graph_version' => 'v2.11',
+		]);
+	
+		try {
+		// Returns a `Facebook\FacebookResponse` object
+		$response = $fb->delete(
+			'/'.$post_id,
+			array (),
+			$token
+		  );
+		} catch(Facebook\Exceptions\FacebookResponseException $e) {
+		  echo 'Graph returned an error: ' . $e->getMessage()." </alert>";
+		  exit;
+		} catch(Facebook\Exceptions\FacebookSDKException $e) {
+		  echo 'Facebook SDK returned an error: ' . $e->getMessage()." </alert>";
+		  exit;
+		}
+		$graphNode = $response->getGraphNode();
+		if($graphNode['success']){
+			return "Your post with id [".$post_id."] success deleted";
+		}else{
+			return "Your post with id [".$post_id."] fail deleted";
+		}
+	}
 	function twPostText($token,$secret,$user_id,$message){
 		$message = ContentPostParser($user_id,$message);
 
@@ -247,7 +276,7 @@
 			return "Sory, we cannot post yet. Fail to upload media";
 		}
 	}
-	function twDelete($token,$secret,$post_id){
+	function twPostDelete($token,$secret,$post_id){
 		try{
 			$connection = new TwitterOAuth(TWITTER_KEY, TWITTER_SECRET, $token, $secret);
 			$connection->setTimeouts(15, 300);
@@ -259,7 +288,7 @@
 				return "Delete fail<br>".var_dump($response);
 			}			
 		}catch(Exception $e){
-			return "Sory, we cannot post yet. Fail to upload media";
+			return "Sory, we cannot delete this post. ".var_dump($e);
 		}
 	}
 ?>
