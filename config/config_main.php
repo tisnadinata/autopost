@@ -100,7 +100,7 @@
 		$result = str_replace("[address]",$user->user_address,$result);
 		$result = str_replace("[email]",$user->user_email,$result);
 		$result = str_replace("[username]",$user->user_username,$result);
-		$result = $result.".\n.\n Tanggal : ".date("d-m-Y H:i:s");
+		$result = $result.".\n.\n Diposting otomatis melalui getrich.systems \nTanggal : ".date("d-m-Y H:i:s");
 		return $result;
 	}
 	function fbPostText($token,$user_id,$message){
